@@ -1,0 +1,211 @@
+:root {
+  --color-1: #1f363d;
+  --color-2: #40798c;
+  --color-3: #346271;
+  --shadow: rgba(0, 0, 0, 0.06);
+}
+
+.trans-root {
+  padding-top: 1rem;
+}
+
+/* Main container */
+.transaction-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px var(--shadow);
+  color: var(--color-1);
+}
+
+/* Header */
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.transaction-header h2 {
+  color: var(--color-2);
+}
+
+/* Search */
+.search-box {
+  padding: 0.5rem;
+  border: 1px solid var(--color-3);
+  border-radius: 6px;
+  background-color: var(--white);
+  color: var(--color-1);
+  width: 320px;
+  transition: box-shadow 0.2s ease;
+}
+
+.search-box:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--color-2);
+}
+
+/* Filters section */
+.transaction-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.transaction-filters input,
+.transaction-filters select {
+  padding: 0.5rem;
+  border: 1px solid var(--color-3);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: #fff;
+  color: var(--color-1);
+  min-width: 150px;
+  transition: box-shadow 0.2s ease;
+}
+
+.transaction-filters input:focus,
+.transaction-filters select:focus {
+  box-shadow: 0 0 5px var(--color-2);
+  outline: none;
+}
+
+/* Headings */
+.transaction-headings {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.5fr 1.5fr 3fr 1fr;
+  font-weight: bold;
+  padding: 0.6rem;
+  border-bottom: 2px solid var(--color-3);
+  background-color: var(--color-2);
+  color: white;
+  border-radius: 8px;
+}
+
+.transaction-headings span {
+  text-align: center;
+}
+
+/* Scroll */
+.scroll-container {
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-right: 0.3rem;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Pagination */
+.pagination-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pagination-buttons button {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-2);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pagination-buttons button:hover {
+  background-color: var(--color-3);
+}
+
+.pagination-buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .transaction-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .transaction-filters {
+    flex-direction: column;
+  }
+
+  .transaction-filters input,
+  .transaction-filters select {
+    width: 100%;
+  }
+
+  .transaction-headings {
+    font-size: 0.85rem;
+    grid-template-columns: 1fr 2fr 1fr 1fr 2fr 1fr;
+  }
+}
+
+.reset-btn {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--color-3);
+  border: 1px solid var(--color-3);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.reset-btn:hover {
+  background-color: var(--color-2);
+  color: #fff;
+  border-color: var(--color-2);
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.1rem;
+  color: var(--color-2);
+}
+
+/* Hide scrollbars completely */
+.scroll-container {
+  max-height: 65vh;
+  overflow-y: scroll;
+  padding-right: 0.3rem;
+  /* scrollbar-width: none; Firefox */
+}
+
+.trans-root::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.transaction-page::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.transaction-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.transaction-filters label {
+  font-weight: 500;
+  color: var(--color-2);
+  font-size: 0.95rem;
+}
+
